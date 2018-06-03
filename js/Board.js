@@ -24,7 +24,7 @@ $('.create-column').on('click', function() {
 	
 function initSortable() {
     $('.card-list').sortable({
-      connectWith: '.card-list',
-      placeholder: 'card-placeholder'
+        connectWith: '.card-list',
+        placeholder: 'card-placeholder'
     }).disableSelection();
   }
