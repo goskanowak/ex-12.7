@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Kalam:400,700&subset=latin-ext');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$fonts: 'Kalam', cursive;;
+$board-color: #ffd58e;
+$white: #fff;
+$black: #000;
+$grey: #808281;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.button {
+    color: $black;
+    background-color: $white;
+    @include border-radius(15px);
+    box-shadow: 1px 1px 10px $white;
+}
+
+.board {
+    background-color: $board-color;
+    box-shadow: 1px 1px 10px $black;
+    margin: 2vh;
+    max-width: 1400px;
+    font-family: $fonts;
+    text-align: center;
+    @include border-radius(15px);
+}
+
+h1 {
+    font-size: 4em;
+    text-shadow: 5px 1px 15px $white;
+    text-decoration-line: underline;
+    letter-spacing: .2em;
+}
+
+.column-container {
+        margin-top: 3%;
+        display: flex;
+        flex-wrap: wrap;
+}
+
+.column {
+    display: inline-block;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    @extend .button;
+    margin: 10px;
+    border: 2px dashed $white;
+    text-shadow: 1px 0 7px $white;
+    color: $black;
+    margin-bottom: 3%;
+}
+
+.column-title {
+    display: inline-block;
+    font-size: 35px;
+    margin: 20px 0;
+    line-height: 40px; 
+}
+
+.card {
+     list-style: none;
+ }
+
+.btn-delete {
+    display: inline-block;
+    font-size: 25px;
+    padding: 0 10px;
+    margin: 0 15px;
+    @extend .button;
+    line-height: 30px;
+}
+
+.column-add-card {
+    display: block;
+    padding: 10px;
+    @include border-radius(15px);
+    @extend .button;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 15px;
+}
+
+.card-description {
+    display: inline-block;
+    font-size: 25px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.create-column {
+     @extend .button;
+     width: 20%;
+     padding: 10px;
+     font-size: 1.5em;
+     font-weight: bold;
+}
+
+.column:nth-child(1n+1) {
+     background-color: #D7E7F2;
+     box-shadow: 0 0 0 5px #D7E7F2;
+     min-height: 200px;
+}
+
+.column:nth-child(2n+1) {
+     background-color: #B9F7BA;
+     box-shadow: 0 0 0 5px #B9F7BA;
+}
+
+.column:nth-child(3n+1) {
+    background-color: #CFCBCB;
+    box-shadow: 0 0 0 5px #CFCBCB;
+}
+
+button {
+    font-family: $fonts; 
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.card-placeholder {
+    background-color: red;
+}
